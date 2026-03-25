@@ -39,10 +39,11 @@ sequenceDiagram
 ## 🔵 READ (R)
 
 ```mermaid
-sequenceDiagram
+ sequenceDiagram
     participant U as User (Browser)
     participant F as Frontend (resources.js)
     participant B as Backend GET /api/resources
+    participant S as Service (logEvent)
     participant DB as PostgreSQL
 
     U->>F: Open resources page
@@ -50,6 +51,7 @@ sequenceDiagram
 
     B->>DB: SELECT * FROM resources
     DB-->>B: Data rows
+    B->>S: logEvent()
 
     alt Success
         B-->>F: 200 OK (JSON)
