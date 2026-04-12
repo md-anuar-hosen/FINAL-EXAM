@@ -1,4 +1,6 @@
- function Navbar() {
+ import { Link } from "react-router-dom";
+
+function Navbar() {
   return (
     <div>
       <div className="top-bar">
@@ -13,6 +15,12 @@
             <strong>Booking System</strong>
             <p className="subtitle">Secure resource booking</p>
           </div>
+        </div>
+
+        {/* ADD THIS */}
+        <div style={{ marginLeft: "auto" }}>
+          <Link to="/" style={{ marginRight: "15px" }}>Home</Link>
+          <Link to="/form">Form</Link>
         </div>
       </div>
     </div>
