@@ -23,9 +23,10 @@
                 </p>
             </section>
 
+            <!-- ✅ FIXED NAME + GROUP -->
             <aside class="author-card">
-                <p><strong>Author:</strong> <span id="author-name">Your Name</span></p>
-                <p><strong>Group ID:</strong> <span id="group-id">Your Group</span></p>
+                <p><strong>Author:</strong> <span id="author-name">Md Anuar Hosen</span></p>
+                <p><strong>Group ID:</strong> <span id="group-id">AITS22P</span></p>
             </aside>
         </div>
     </header>
@@ -48,7 +49,7 @@
 
             <div class="content-grid">
 
-                <!-- CUSTOMER MANAGEMENT -->
+                <!-- ✅ CUSTOMER MANAGEMENT -->
                 <section class="panel" aria-labelledby="customer-management-heading">
                     <h2 id="customer-management-heading">Customer Management</h2>
                     <p class="panel-description">
@@ -56,28 +57,44 @@
                     </p>
 
                     <div id="customer-form">
-                        <form id="form">
+
+                        <!-- ✅ NEW USER-FRIENDLY FORM -->
+                        <form id="form" class="form-grid">
 
                             <input type="hidden" id="customerId" />
 
-                            <label for="firstName">First Name</label>
-                            <input type="text" id="firstName" required />
+                            <div class="form-row">
+                                <div>
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" required />
+                                </div>
 
-                            <label for="lastName">Last Name</label>
-                            <input type="text" id="lastName" required />
+                                <div>
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" required />
+                                </div>
+                            </div>
 
-                            <label for="email">Email</label>
-                            <input type="email" id="email" required />
+                            <div class="form-row">
+                                <div>
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" required />
+                                </div>
 
-                            <label for="phone">Phone</label>
-                            <input type="text" id="phone" />
+                                <div>
+                                    <label for="phone">Phone</label>
+                                    <input type="text" id="phone" />
+                                </div>
+                            </div>
 
-                            <label for="birthDate">Birth Date</label>
-                            <input type="date" id="birthDate" />
+                            <div>
+                                <label for="birthDate">Birth Date</label>
+                                <input type="date" id="birthDate" />
+                            </div>
 
-                            <div style="margin-top: 10px;">
-                                <button type="submit">Save</button>
-                                <button type="button" id="deleteBtn">Delete</button>
+                            <div class="btn-group">
+                                <button type="submit" class="btn-save">Save</button>
+                                <button type="button" id="deleteBtn" class="btn-delete">Delete</button>
                             </div>
 
                         </form>
